@@ -1,0 +1,10 @@
+#installation d'Apache sur le serveur de développement
+- name: Installation d'Apache
+  hosts: all
+  tasks:
+
+- name: Inscrire le nouveau dépôt
+  apt_repository:
+    repo: deb http://ftp.fr.debian.org/debian/ stretch main
+    state: present
+    update_cache: yes
